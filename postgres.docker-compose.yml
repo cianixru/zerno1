@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+    postgres:
+        restart: 'always'
+        image: 'postgres:14.2'
+        container_name: 'zerno-postgres'
+        hostname: 'postgres'
+        ports:
+          - '5433:5432'
+        environment:
+            POSTGRES_DB: 'zern-db'
+            POSTGRES_USER: 'zern'
+            POSTGRES_PASSWORD: '1234'
